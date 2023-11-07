@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LoginSuites">
+    <listeners>
+        <listener class-name="listeners.Transform"></listener>
+        <listener class-name="listeners.ScreenshotListener"></listener>
+    </listeners>
+    <test name="LoginTest">
+        <classes>
+            <class name="tests.FailedLogInTest"></class>
+            <class name="tests.LoginTest"></class>
+        </classes>
+    </test>
+</suite>
