@@ -30,6 +30,9 @@ public class BasePage {
         Actions actions = new Actions(driver);
         actions.moveToElement(driver.findElement(elementBy)).click().build().perform();
     }
+    public WebElement byToWebElement(By elementBy){
+        return driver.findElement(elementBy);
+    }
     public void writeText(By elementBy, String expectedText){
         waitVisibility(elementBy);
         driver.findElement(elementBy).clear();
