@@ -33,6 +33,9 @@ public class BasePage {
     public WebElement byToWebElement(By elementBy){
         return driver.findElement(elementBy);
     }
+    public void changeAttribute(By element){
+        System.out.println("This is my new change.");
+    }
     public void writeText(By elementBy, String expectedText){
         waitVisibility(elementBy);
         driver.findElement(elementBy).clear();
