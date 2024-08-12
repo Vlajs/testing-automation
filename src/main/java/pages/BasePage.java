@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -32,6 +33,10 @@ public class BasePage {
     }
     public WebElement byToWebElement(By elementBy){
         return driver.findElement(elementBy);
+    }
+    public void changeAttribute(By elementBy, String attributeToBeChanged, String newValueOfAttribute){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("argument[0].setAttribute'" + attributeToBeChanged + "', '" + newValueOfAttribute + "')", elementBy);
     }
     public void writeText(By elementBy, String expectedText){
         waitVisibility(elementBy);
