@@ -42,6 +42,9 @@ public class BasePage {
     public void newMethod(String text){
         System.out.println("This is new method which will accept only text.");
     }
+    public void newMethod2(String text2){
+        System.out.println("This is new method 2 which will accept only text.");
+    }
     public void writeText(By elementBy, String expectedText){
         waitVisibility(elementBy);
         driver.findElement(elementBy).clear();
