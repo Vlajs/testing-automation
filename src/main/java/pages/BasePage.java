@@ -42,8 +42,13 @@ public class BasePage {
     public void newMethod(String text){
         System.out.println("This is new method which will accept only text.");
     }
+    public void newMethod2(String text2){
+        System.out.println("This is new method 2 which will accept only text.");
+        System.out.println("End of the second method.");
+    }
     public void newMethod3(String text3){
         System.out.println("This is new method 3 which will accept only text.");
+        System.out.println("End of the third method.");
     }
     public void writeText(By elementBy, String expectedText){
         waitVisibility(elementBy);
