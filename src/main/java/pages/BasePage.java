@@ -39,6 +39,9 @@ public class BasePage {
         js.executeScript("argument[0].setAttribute'" + attributeToBeChanged + "', '" + newValueOfAttribute + "')", elementBy);
         System.out.println("This is new change.");
     }
+    public void newMethod(String text){
+        System.out.println("This is new method which will accept only text.");
+    }
     public void writeText(By elementBy, String expectedText){
         waitVisibility(elementBy);
         driver.findElement(elementBy).clear();
