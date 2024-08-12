@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,6 +24,11 @@ public class BasePage {
     public void clickOnElement(By elementBy){
         waitVisibility(elementBy);
         driver.findElement(elementBy).click();
+    }
+    public void hoverOnElement(By elementBy){
+        waitVisibility(elementBy);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(elementBy)).click().build().perform();
     }
     public void writeText(By elementBy, String expectedText){
         waitVisibility(elementBy);
